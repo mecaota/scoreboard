@@ -1,0 +1,22 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>hatena/renovate-config",
+    "group:recommended",
+    "group:definitelyTyped",
+    "group:test",
+    ":timezone(Asia/Tokyo)"
+  ],
+  "labels": ["dependencies"],
+  "reviewers": ["mecaota"],
+  "reviewersFromCodeOwners": true,
+  "separateMultipleMajor": true,
+  "schedule": ["after 6am"],
+  "packageRules": [
+    {
+      "extends": "group:storybookMonorepo",
+      "groupName": "storybook",
+      "packagePatterns": ["^@storybook/", "^storybook-"]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+name: 'Test'
+
+on: pull_request
+
+jobs:
+  check:
+    name: CheckCode
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Use Node.js 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Initialize yarn
+        run: yarn install --frozen-lockfile
+
+      - name: Lint
+        run: yarn lint:check
+
+      - name: Stylelint
+        run: yarn lint:style
+
+      - name: Format check
+        run: yarn prettier:check
+
+      - name: Typescript check
+        run: yarn tsc
+
+      - name: Test
+        run: yarn test
+
+      - name: Pre Build
+        run: yarn build

@@ -1,0 +1,74 @@
+{
+  "name": "template-mecaota-frontend",
+  "version": "2.0.0",
+  "type": "module",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.6.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@linaria/atomic": "^4.2.4",
+    "@linaria/babel-preset": "^4.3.2",
+    "@linaria/core": "^4.2.4",
+    "@linaria/react": "^4.3.2",
+    "@linaria/stylelint-config-standard-linaria": "^4.1.5",
+    "@linaria/vite": "^4.2.4",
+    "@storybook/addon-actions": "^6.5.15",
+    "@storybook/addon-essentials": "^6.5.15",
+    "@storybook/addon-links": "^6.5.15",
+    "@storybook/builder-vite": "^0.2.6",
+    "@storybook/react": "^6.5.15",
+    "@trivago/prettier-plugin-sort-imports": "^4.0.0",
+    "@types/jest": "^29.2.5",
+    "@types/node": "^18.11.18",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.48.0",
+    "@typescript-eslint/parser": "^5.48.0",
+    "@vitejs/plugin-react": "^3.0.0",
+    "babel-loader": "^9.1.2",
+    "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-import-resolver-typescript": "^3.5.2",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.3",
+    "jest": "^29.3.1",
+    "lint-staged": "^13.1.0",
+    "postcss": "^8.4.20",
+    "prettier": "2.8.1",
+    "stylelint": "^14.16.1",
+    "stylelint-config-prettier": "^9.0.4",
+    "ts-jest": "^29.0.3",
+    "vite": "^4.0.4",
+    "vite-plugin-linaria": "^1.0.0",
+    "vite-tsconfig-paths": "^4.0.3"
+  },
+  "lint-staged": {
+    "*.{json,js,ts,tsx}": [
+      "prettier --ignore-unknown --no-error-on-unmatched-pattern --write"
+    ],
+    "*.{js,ts,tsx}": [
+      "eslint --ext .ts,.tsx --fix"
+    ]
+  },
+  "scripts": {
+    "build": "tsc && vite build",
+    "dev": "vite",
+    "lint:check": "eslint . --ext .ts,.tsx",
+    "lint:fmt": "eslint . --ext .ts,.tsx --fix",
+    "lint:style": "stylelint \"**/*.{ts,tsx,css}\" --ignore-path .gitignore",
+    "prepare": "husky install",
+    "prettier:check": "prettier --ignore-unknown --no-error-on-unmatched-pattern --ignore-path .gitignore .",
+    "prettier:fmt": "prettier --ignore-unknown --no-error-on-unmatched-pattern --ignore-path .gitignore --write .",
+    "serve": "vite preview",
+    "storybook:build": "build-storybook",
+    "storybook:dev": "start-storybook -p 6006",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --passWithNoTests"
+  }
+}
