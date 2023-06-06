@@ -45,7 +45,7 @@
     "stylelint": "^14.16.1",
     "stylelint-config-prettier": "^9.0.4",
     "ts-jest": "^29.0.3",
-    "vite": "^4.0.4",
+    "vite": "^4.0.5",
     "vite-plugin-linaria": "^1.0.0",
     "vite-tsconfig-paths": "^4.0.3"
   },
