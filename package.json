@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
-    "@linaria/atomic": "^4.2.4",
+    "@linaria/atomic": "^4.5.4",
     "@linaria/babel-preset": "^4.3.2",
     "@linaria/core": "^4.2.4",
     "@linaria/react": "^4.3.2",
