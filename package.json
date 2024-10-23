@@ -10,7 +10,7 @@
     "typescript": "^4.9.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.12",
+    "@babel/core": "^7.25.9",
     "@linaria/atomic": "^4.2.4",
     "@linaria/babel-preset": "^4.3.2",
     "@linaria/core": "^4.2.4",
